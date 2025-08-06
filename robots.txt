@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://globeai.com/sitemap.xml
+
+# Disallow admin and config files
+Disallow: /config/
+Disallow: /phpmailer/
+Disallow: /mail.php
+Disallow: /send_email.php
+
+# Allow important directories
+Allow: /blogImage/
+Allow: /blogs/
+Allow: /styles.css
+Allow: /script.js 
