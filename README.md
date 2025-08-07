@@ -93,3 +93,20 @@ To integrate this navbar into your project:
 4. Add your own functionality to the JavaScript file
 
 The navbar is ready to use and can be easily extended with additional features as needed. 
+
+
+---------------------------------
+---------------------------------
+---------------------------------
+
+blog write prompt:
+
+Create a copy of ai-daily-life-transforming-modern-world.html file and place the bellow content there. And add new cards for this blog in index.html and blogs.html files also.
+mark the published data as 08th Aug 2025
+
+---------------------------------
+blog generate prompt:
+
+want to write a blog on " A universal AI deepfake detector was developed that identifies synthetic videos with 98% accuracy across multiple platforms and content types, aiding misinformation detection" with following keyword forcussing webisite. provide me a SEO friendly attractive topic also
+
+Target keywords: artificial intelligence, AI news, AI technology, technology news, tech news, emerging technology, machine learning, deep learning, natural language processing, generative AI, AI updates, digital transformation, latest technology, future technology, tech trends, automation technology
