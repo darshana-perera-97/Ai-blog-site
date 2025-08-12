@@ -102,7 +102,9 @@ The navbar is ready to use and can be easily extended with additional features a
 blog write prompt:
 
 Create a copy of ai-daily-life-transforming-modern-world.html file and place the bellow content there. And add new cards for this blog in index.html and blogs.html files also.
-mark the published data as 08th Aug 2025
+Add tables, bullets points also if needed.
+
+mark the published data as 13th Aug 2025
 
 ---------------------------------
 blog generate prompt:
