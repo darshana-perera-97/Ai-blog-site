@@ -109,6 +109,6 @@ mark the published data as 13th Aug 2025
 ---------------------------------
 blog generate prompt:
 
-want to write a blog on " A universal AI deepfake detector was developed that identifies synthetic videos with 98% accuracy across multiple platforms and content types, aiding misinformation detection" with following keyword forcussing webisite. provide me a SEO friendly attractive topic also
+want to write a blog on " A universal AI deepfake detector was developed that identifies synthetic videos with 98% accuracy across multiple platforms and content types, aiding misinformation detection" with following keyword forcussing webisite. provide me a SEO friendly attractive topic also. should have 350 words?
 
 Target keywords: artificial intelligence, AI news, AI technology, technology news, tech news, emerging technology, machine learning, deep learning, natural language processing, generative AI, AI updates, digital transformation, latest technology, future technology, tech trends, automation technology
