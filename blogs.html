@@ -6,20 +6,19 @@
 
     <!-- Primary Meta Tags -->
     <title>
-      All AI Blog Posts - Latest AI News, Machine Learning & Technology Articles
-      | GlobeAI
+      All AI Blog Posts - Complete Collection with Pagination | GlobeAI
     </title>
     <meta
       name="title"
-      content="All AI Blog Posts - Latest AI News, Machine Learning & Technology Articles | GlobeAI"
+      content="All AI Blog Posts - Complete Collection with Pagination | GlobeAI"
     />
     <meta
       name="description"
-      content="Explore our comprehensive collection of AI blog posts covering artificial intelligence, machine learning, generative AI, and the latest technology trends. Expert insights and analysis."
+      content="Browse our complete collection of AI blog posts with pagination. Discover all articles covering artificial intelligence, machine learning, and emerging technology trends."
     />
     <meta
       name="keywords"
-      content="AI blog posts, artificial intelligence articles, machine learning blog, AI technology news, generative AI, AI tools, technology blog"
+      content="all AI blog posts, AI articles collection, artificial intelligence blog, machine learning articles, AI technology news, paginated blog posts"
     />
     <meta name="author" content="GlobeAI" />
     <meta name="robots" content="index, follow" />
@@ -27,14 +26,14 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://globeai.com/blogs.html" />
+    <meta property="og:url" content="https://globeai.com/all-blogs.html" />
     <meta
       property="og:title"
-      content="All AI Blog Posts - Latest AI News & Technology Articles | GlobeAI"
+      content="All AI Blog Posts - Complete Collection with Pagination | GlobeAI"
     />
     <meta
       property="og:description"
-      content="Explore our comprehensive collection of AI blog posts covering artificial intelligence, machine learning, generative AI, and the latest technology trends."
+      content="Browse our complete collection of AI blog posts with pagination. Discover all articles covering artificial intelligence, machine learning, and emerging technology trends."
     />
     <meta
       property="og:image"
@@ -44,14 +43,14 @@
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://globeai.com/blogs.html" />
+    <meta property="twitter:url" content="https://globeai.com/all-blogs.html" />
     <meta
       property="twitter:title"
-      content="All AI Blog Posts - Latest AI News & Technology Articles | GlobeAI"
+      content="All AI Blog Posts - Complete Collection with Pagination | GlobeAI"
     />
     <meta
       property="twitter:description"
-      content="Explore our comprehensive collection of AI blog posts covering artificial intelligence, machine learning, generative AI, and the latest technology trends."
+      content="Browse our complete collection of AI blog posts with pagination. Discover all articles covering artificial intelligence, machine learning, and emerging technology trends."
     />
     <meta
       property="twitter:image"
@@ -59,7 +58,7 @@
     />
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://globeai.com/blogs.html" />
+    <link rel="canonical" href="https://globeai.com/all-blogs.html" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -100,65 +99,129 @@
       gtag("config", "G-HB1TENQ5SG");
     </script>
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "name": "All AI Blog Posts",
-        "description": "Explore our comprehensive collection of AI blog posts covering artificial intelligence, machine learning, generative AI, and the latest technology trends.",
-        "url": "https://globeai.com/blogs.html",
-        "publisher": {
-          "@type": "Organization",
-          "name": "GlobeAI",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://globeai.com/logo.png"
-          }
-        },
-        "mainEntity": {
-          "@type": "ItemList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "item": {
-                "@type": "BlogPosting",
-                "headline": "Large Language Models (LLM) Simplified: Understanding AI's Language Revolution",
-                "url": "https://globeai.com/blogs/large-language-models-llm-simplified.html"
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "item": {
-                "@type": "BlogPosting",
-                "headline": "Top 5 AI Chatbot Providers Transforming Business Communication in 2025",
-                "url": "https://globeai.com/blogs/top-5-ai-chatbot-providers-transforming-business-communication-2025.html"
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "item": {
-                "@type": "BlogPosting",
-                "headline": "Revolutionizing Business with AI Chatbots: The Future of Customer Engagement",
-                "url": "https://globeai.com/blogs/ai-chatbots-revolutionizing-business.html"
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 4,
-              "item": {
-                "@type": "BlogPosting",
-                "headline": "Understanding Artificial Intelligence: A Comprehensive Guide",
-                "url": "https://globeai.com/blogs/understanding-artificial-intelligence-comprehensive-guide.html"
-              }
-            }
-          ]
-        }
+    <!-- Custom Pagination Styles -->
+    <style>
+      .pagination-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
       }
-    </script>
+      
+      .pagination {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 0.5rem;
+      }
+      
+      .pagination .page-item {
+        margin: 0;
+      }
+      
+      .pagination .page-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1rem;
+        min-width: 45px;
+        height: 45px;
+        border: 2px solid #e9ecef;
+        background-color: #fff;
+        color: #6c757d;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+      
+      .pagination .page-link:hover {
+        background-color: #007bff;
+        color: #fff;
+        border-color: #007bff;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+      }
+      
+      .pagination .page-item.active .page-link {
+        background-color: #007bff;
+        color: #fff;
+        border-color: #007bff;
+        box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+      }
+      
+      .pagination .page-item.disabled .page-link {
+        background-color: #f8f9fa;
+        color: #6c757d;
+        border-color: #e9ecef;
+        cursor: not-allowed;
+        opacity: 0.6;
+      }
+      
+      .pagination .page-item.disabled .page-link:hover {
+        background-color: #f8f9fa;
+        color: #6c757d;
+        border-color: #e9ecef;
+        transform: none;
+        box-shadow: none;
+      }
+      
+      .blog-stats {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 2rem;
+        border-radius: 15px;
+        margin-bottom: 3rem;
+        text-align: center;
+      }
+      
+      .blog-stats h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+      
+      .blog-stats p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        margin: 0;
+      }
+      
+      .filter-section {
+        background: #f8f9fa;
+        padding: 2rem;
+        border-radius: 15px;
+        margin-bottom: 3rem;
+      }
+      
+      .filter-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+      }
+      
+      .filter-btn {
+        padding: 0.5rem 1rem;
+        border: 2px solid #dee2e6;
+        background: white;
+        color: #6c757d;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+      
+      .filter-btn:hover,
+      .filter-btn.active {
+        background: #007bff;
+        color: white;
+        border-color: #007bff;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+      }
+    </style>
   </head>
 
   <body>
@@ -225,1407 +288,208 @@
     <section class="page-header-section">
       <div class="container">
         <div class="page-header-content text-center">
-          <h1 class="page-title">All AI Technology Blog Posts</h1>
+          <h1 class="page-title">Blog Collection</h1>
           <p class="page-subtitle">
-            Discover the latest AI news, machine learning trends, and insights
-            into artificial intelligence technology
+            Browse all our AI articles with pagination - Discover the latest in artificial intelligence, machine learning, and emerging technology
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Blog Posts Grid -->
+    <!-- Blog Stats -->
+    <!-- <section class="container">
+      <div class="blog-stats">
+        <h2>68 AI Articles</h2>
+        <p>Comprehensive coverage of artificial intelligence, machine learning, and emerging technology trends</p>
+      </div>
+    </section> -->
+
+    <!-- Filter Section -->
+    <section class="container">
+      <div class="filter-section">
+        <!-- <h3 class="text-center mb-4">Filter by Category</h3> -->
+        <div class="filter-buttons">
+          <a href="#" class="filter-btn active" data-category="all">All Posts</a>
+          <a href="#" class="filter-btn" data-category="AI Technology">AI Technology</a>
+          <a href="#" class="filter-btn" data-category="Mobile Technology">Mobile Technology</a>
+          <a href="#" class="filter-btn" data-category="AI Applications">AI Applications</a>
+          <a href="#" class="filter-btn" data-category="AI Ethics">AI Ethics</a>
+          <a href="#" class="filter-btn" data-category="AI Research">AI Research</a>
+          <a href="#" class="filter-btn" data-category="AI Industry">AI Industry</a>
+          <a href="#" class="filter-btn" data-category="AI Development">AI Development</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- All Blog Posts with Pagination -->
     <section class="all-blogs-section">
       <div class="container">
-        <!-- Featured Post -->
-        <div class="featured-post-section">
-          <a href="blogs/trending-ai-tools-2025.html" class="blog-card-link">
-            <h2 class="section-title">Featured Post</h2>
-            <div class="blog-card featured-card">
-              <div class="card-image-section">
-                <img
-                  src="blogImage/trending-ai-tools-2025.jpg"
-                  alt="Trending AI Tools 2025"
-                  class="card-img"
-                />
-              </div>
-              <div class="card-content-section">
-                <div class="card-meta">
-                  <span class="category-badge">AI Technology</span>
-                  <span class="separator">•</span>
-                  <span class="date">Aug 06, 2025</span>
-                </div>
-                <h2 class="card-title">
-                  <span class="title-line"
-                    >Trending AI Tools and Technologies</span
-                  >
-                  <span class="title-line">in 2025: The Future of</span>
-                  <span class="title-line">Artificial Intelligence</span>
-                </h2>
-                <p class="card-description">
-                  Discover the hottest AI tools, platforms, and technologies
-                  shaping 2025. From generative AI to machine learning, explore
-                  the latest trends in artificial intelligence, automation
-                  technology, and digital transformation.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- All Posts Grid -->
         <div class="all-posts-section">
-          <h2 class="section-title">All Posts</h2>
-          
-          <!-- Search and Filter Controls -->
-          <div class="blog-controls mb-4">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="search-box">
-                  <input type="text" id="searchInput" class="form-control" placeholder="Search blog posts..." />
-                  <i class="fas fa-search search-icon"></i>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <select id="categoryFilter" class="form-select">
-                  <option value="">All Categories</option>
-                  <option value="AI Technology">AI Technology</option>
-                  <option value="AI Applications">AI Applications</option>
-                  <option value="AI Research">AI Research</option>
-                  <option value="AI Industry">AI Industry</option>
-                  <option value="AI Development">AI Development</option>
-                  <option value="AI Ethics">AI Ethics</option>
-                  <option value="AI Fundamentals">AI Fundamentals</option>
-                  <option value="Mobile Technology">Mobile Technology</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          
-          <div class="blog-cards-grid">
-            <!-- Card 1 - Apple Intelligence -->
-            <a
-              href="blogs/apple-intelligence-how-ai-technology-shaping-future-digital-transformation.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/apple-intelligence-how-ai-technology-shaping-future-digital-transformation.jpg"
-                    alt="Apple Intelligence - AI Technology Digital Transformation"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Sep 12, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    Apple Intelligence: How AI Technology is Shaping the Future of Digital Transformation
-                  </h3>
-                  <p class="card-description">
-                    Explore how Apple Intelligence is revolutionizing digital transformation with advanced AI technology, machine learning, and generative AI innovations that shape the future of technology...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 2 - iPhone 17 AI Innovation -->
-            <a
-              href="blogs/iphone-17-apple-latest-innovation-shaping-future-ai-emerging-technology.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/iphone-17-apple-latest-innovation-shaping-future-ai-emerging-technology.jpg"
-                    alt="iPhone 17 AI Innovation - Apple's Latest Technology"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">Mobile Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Sep 10, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    iPhone 17: How Apple's Latest Innovation Is Shaping the Future of AI and Emerging Technology
-                  </h3>
-                  <p class="card-description">
-                    Discover how Apple's iPhone 17 integrates cutting-edge AI technology, machine learning, and generative AI to shape the future of mobile innovation and digital transformation...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 2 - Gemini 2.5 Flash Image -->
-            <a
-              href="blogs/gemini-2-5-flash-image-revolutionizing-ai-technology-digital-transformation.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/gemini-2-5-flash-image-revolutionizing-ai-technology-digital-transformation.jpg"
-                    alt="Gemini 2.5 Flash Image - AI Technology and Digital Transformation"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Sep 03, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    Gemini 2.5 Flash Image: Revolutionizing AI Technology and Digital Transformation
-                  </h3>
-                  <p class="card-description">
-                    Gemini 2.5 Flash Image emerges as a groundbreaking AI technology reshaping image generation and editing with advanced machine learning, deep learning, and natural language processing capabilities...
-                  </p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <select id="categoryFilter" class="form-select">
-                  <option value="">All Categories</option>
-                  <option value="AI Technology">AI Technology</option>
-                  <option value="AI Business Applications">AI Business Applications</option>
-                  <option value="AI Research">AI Research</option>
-                  <option value="AI Ethics">AI Ethics</option>
-                  <option value="AI Industry">AI Industry</option>
-                  <option value="AI Integration">AI Integration</option>
-                  <option value="AI Development">AI Development</option>
-                  <option value="AI Fundamentals">AI Fundamentals</option>
-                  <option value="AI Applications">AI Applications</option>
-                  <option value="AI-Powered Tools">AI-Powered Tools</option>
-                  <option value="Mobile Technology">Mobile Technology</option>
-                  <option value="Quantum Computing">Quantum Computing</option>
-                  <option value="AI Startups">AI Startups</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          
-          <div class="blog-cards-grid" id="blogCardsGrid">
-            <!-- Blog cards will be dynamically loaded here -->
-            <div class="loading-spinner text-center py-5">
-              <div class="spinner-border text-primary" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div>
-              <p class="mt-3 text-muted">Loading blog posts...</p>
-            </div>
-          </div>
-
-          <!-- Pagination Controls -->
-          <div class="pagination-controls text-center mt-4" id="paginationControls" style="display: none;">
-            <nav aria-label="Blog pagination">
-              <ul class="pagination justify-content-center" id="paginationList">
-                <!-- Pagination buttons will be generated here -->
-              </ul>
-            </nav>
-            <div class="pagination-info mt-3">
-              <span id="paginationInfo">Showing 1-12 of 62 posts</span>
-            </div>
-          </div>
-
-        </div>
-
-
-        <!-- Load More Button -->
-        <!-- <div class="load-more-section text-center">
-                <button class="load-more-btn">Load More Posts</button>
-            </div> -->
-                  <h3 class="card-title">
-                    From Google Search to AI Search: The Future of Digital
-                    Transformation with Generative AI and GPT-5
-                  </h3>
-                  <p class="card-description">
-                    The transition from the traditional Google Search era to the
-                    AI-powered search era marks a groundbreaking shift in how we
-                    access and interact with information online. Discover how
-                    this revolution is reshaping digital transformation...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 3 -->
-            <a
-              href="blogs/gpt-3-vs-gpt-4-vs-gpt-5-evolution-ai-technology-future.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/gpt-3-vs-gpt-4-vs-gpt-5-evolution-ai-technology-future.jpg"
-                    alt="GPT Evolution Comparison"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 12, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    GPT-3 vs GPT-4 vs GPT-5: The Evolution of AI Technology and
-                    What It Means for the Future
-                  </h3>
-                  <p class="card-description">
-                    The world of artificial intelligence is rapidly evolving,
-                    and OpenAI's GPT models embody this transformation at the
-                    forefront of AI technology. Discover how these models have
-                    evolved and what it means for the future...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 3 -->
-            <a
-              href="blogs/revolutionary-voice-technology-gpt-5-transforming-ai-machine-learning-natural-language-processing-2025.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/revolutionary-voice-technology-gpt-5-transforming-ai-machine-learning-natural-language-processing-2025.jpg"
-                    alt="GPT-5 Voice Technology"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 12, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    Revolutionary Voice Technology with GPT-5: Transforming AI,
-                    Machine Learning, and Natural Language Processing
-                  </h3>
-                  <p class="card-description">
-                    The advent of GPT-5 marks a revolutionary leap in artificial
-                    intelligence and voice technology, setting a new standard
-                    for emerging technology in 2025. Discover how its multimodal
-                    capabilities are transforming conversational AI...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 4 -->
-            <a
-              href="blogs/unlocking-future-three-powerful-variants-openai-gpt-5-transforming-ai-technology.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/unlocking-future-three-powerful-variants-openai-gpt-5-transforming-ai-technology.jpg"
-                    alt="GPT-5 Variants"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 11, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    Unlocking the Future: Three Powerful Variants of OpenAI's
-                    GPT-5 Transforming AI Technology
-                  </h3>
-                  <p class="card-description">
-                    The landscape of artificial intelligence (AI) just reached a
-                    new milestone with OpenAI's release of GPT-5. Discover how
-                    its three distinct model variants are revolutionizing AI
-                    technology...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 5 -->
-            <a
-              href="blogs/gpt-5-revolution-openai-latest-ai-breakthrough-transforming-digital-technology-2025.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/gpt-5-openai-revolutionizing-artificial-intelligence-shaping-future-technology-2025.jpg"
-                    alt="GPT-5 Revolution"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 11, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    GPT-5 Revolution: How OpenAI's Latest AI Breakthrough is
-                    Transforming Digital Technology
-                  </h3>
-                  <p class="card-description">
-                    The artificial intelligence landscape has been forever
-                    changed with the groundbreaking release of GPT-5. Discover
-                    how this revolutionary AI technology represents the most
-                    significant leap in generative AI capabilities since
-                    ChatGPT...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 6 -->
-            <a href="blogs/trending-ai-tools-2025.html" class="blog-card-link">
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/trending-ai-tools-2025.jpg"
-                    alt="Trending AI Tools 2025"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 06, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    Trending AI Tools and Technologies in 2025: The Future of
-                    Artificial Intelligence
-                  </h3>
-                  <p class="card-description">
-                    Discover the hottest AI tools, platforms, and technologies
-                    shaping 2025. From generative AI to machine learning,
-                    explore the latest trends...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 7 -->
-            <a
-              href="blogs/yahoo-japan-mandates-daily-generative-ai-usage-all-employees-drive-digital-transformation-boost-productivity.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/yahoo-japan-mandates-daily-generative-ai-usage-all-employees-drive-digital-transformation-boost-productivity.jpg"
-                    alt="Yahoo Japan Generative AI Workplace Mandate"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 11, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    Yahoo Japan Mandates Daily Generative AI Usage for All
-                    Employees
-                  </h3>
-                  <p class="card-description">
-                    Discover how Yahoo Japan is mandating daily generative AI
-                    usage for all 11,000 employees to drive digital
-                    transformation and boost productivity. Learn about machine
-                    learning, deep learning, and automation technology in the
-                    workplace...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 8 -->
-            <a
-              href="blogs/china-new-low-cost-open-source-ai-model-outshines-deepseek-game-changer-ai-technology-digital-transformation.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/china-new-low-cost-open-source-ai-model-outshines-deepseek-game-changer-ai-technology-digital-transformation.jpg"
-                    alt="China's New Low-Cost Open-Source AI Model"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 11, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    China's New Low-Cost Open-Source AI Model Outshines DeepSeek
-                  </h3>
-                  <p class="card-description">
-                    Discover how China's new low-cost open-source AI model
-                    GLM-4.5 outshines DeepSeek in efficiency and capability.
-                    Learn about machine learning, deep learning, and digital
-                    transformation in AI technology...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 9 -->
-            <a
-              href="blogs/heygen-launches-video-agent-revolutionizing-video-production-ai-generative-technology.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/heygen-launches-video-agent-revolutionizing-video-production-ai-generative-technology.jpg"
-                    alt="HeyGen Video Agent"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 10, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    HeyGen Launches Video Agent: Revolutionizing Video
-                    Production with AI
-                  </h3>
-                  <p class="card-description">
-                    Discover how HeyGen's Video Agent is revolutionizing video
-                    production with AI and generative technology. Learn about
-                    machine learning, deep learning, and natural language
-                    processing in automated video creation...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 10 -->
-            <a
-              href="blogs/unlocking-future-ai-powered-development-exploring-gemini-cli-seamless-automation-digital-transformation.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/unlocking-future-ai-powered-development-exploring-gemini-cli-seamless-automation-digital-transformation.jpg"
-                    alt="Gemini CLI"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 10, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    Unlocking the Future of AI-Powered Development: Exploring
-                    Gemini CLI
-                  </h3>
-                  <p class="card-description">
-                    Discover how Gemini CLI is transforming AI-powered
-                    development with seamless automation and digital
-                    transformation. Learn about machine learning, deep learning,
-                    and natural language processing in software development...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 11 -->
-            <a
-              href="blogs/gpt-5-revolution-openai-latest-ai-breakthrough-transforming-digital-technology-2025.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/gpt-5-openai-revolutionizing-artificial-intelligence-shaping-future-technology-2025.jpg"
-                    alt="GPT-5 Revolution"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 11, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    GPT-5 Revolution: How OpenAI's Latest AI Breakthrough is
-                    Transforming Digital Technology
-                  </h3>
-                  <p class="card-description">
-                    The artificial intelligence landscape has been forever
-                    changed with the groundbreaking release of GPT-5. Discover
-                    how this revolutionary AI technology represents the most
-                    significant leap in generative AI capabilities since
-                    ChatGPT...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 12 -->
-            <a
-              href="blogs/outreach-ai-agents-revolutionizing-sales-workflows-automated-prospecting-email-sequences.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/outreach-ai-agents-revolutionizing-sales-workflows-automated-prospecting-email-sequences.jpg"
-                    alt="Outreach AI Agents"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 09, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    How Outreach's AI Agents are Revolutionizing Sales Workflows
-                  </h3>
-                  <p class="card-description">
-                    Discover how Outreach's AI agents are revolutionizing sales
-                    workflows with automated prospecting and email sequences.
-                    Learn about AI technology, automation, and digital
-                    transformation in sales...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 13 -->
-            <a
-              href="blogs/broadcom-next-gen-ai-chip-jericho4-revolutionizes-data-center-connectivity-future-ai-machine-learning-breakthroughs.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/broadcom-next-gen-ai-chip-jericho4-revolutionizes-data-center-connectivity-future-ai-machine-learning-breakthroughs.jpg"
-                    alt="Broadcom Jericho4 AI Chip"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 09, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    Broadcom's Next-Gen AI Chip Jericho4 Revolutionizes Data
-                    Center Connectivity
-                  </h3>
-                  <p class="card-description">
-                    Discover how Broadcom's Jericho4 AI chip is revolutionizing
-                    data center connectivity for future AI and machine learning
-                    breakthroughs. Learn about next-generation AI technology and
-                    emerging tech trends...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 14 -->
-            <a
-              href="blogs/white-castle-ai-powered-robot-delivery-bots-chicago-automation-technology-digital-transformation.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/white-castle-ai-powered-robot-delivery-bots-chicago-automation-technology-digital-transformation.jpg"
-                    alt="White Castle AI Robot Delivery"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 07, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    White Castle Revolutionizes Food Delivery in Chicago with
-                    AI-Powered Robot Bots
-                  </h3>
-                  <p class="card-description">
-                    Discover how White Castle is revolutionizing food delivery
-                    in Chicago with AI-powered robot bots. Learn about
-                    automation technology, digital transformation, and the
-                    future of AI in the food industry...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 15 -->
-            <a
-              href="blogs/ai-revolutionizing-cybersecurity-2025-adaptive-ddos-attacks-predictive-threat-analysis.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/ai-revolutionizing-cybersecurity-2025-adaptive-ddos-attacks-predictive-threat-analysis.jpg"
-                    alt="AI Revolutionizing Cybersecurity 2025"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 07, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    How Artificial Intelligence is Revolutionizing Cybersecurity
-                    in 2025: Adaptive DDoS Attacks and Predictive Threat
-                    Analysis
-                  </h3>
-                  <p class="card-description">
-                    Discover how AI is revolutionizing cybersecurity in 2025
-                    with adaptive DDoS attacks, predictive threat analysis, and
-                    machine learning. Learn about emerging AI technologies
-                    transforming digital security...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 16 -->
-            <a
-              href="blogs/universal-ai-deepfake-detector-98-percent-accuracy-misinformation-detection.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/universal-ai-deepfake-detector-98-percent-accuracy-misinformation-detection.jpg"
-                    alt="Universal AI Deepfake Detector"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 07, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    Revolutionizing Misinformation Detection: Universal AI
-                    Deepfake Detector Achieves 98% Accuracy
-                  </h3>
-                  <p class="card-description">
-                    Discover how a universal AI deepfake detector achieves 98%
-                    accuracy across platforms, revolutionizing misinformation
-                    detection. Learn about machine learning, deep learning, and
-                    natural language processing techniques combating digital
-                    deception...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 17 -->
-            <a
-              href="blogs/ai-discovers-promising-battery-materials-energy-storage-breakthrough.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/ai-discovers-promising-battery-materials-energy-storage-breakthrough.jpg"
-                    alt="AI Discovers Promising Battery Materials"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 07, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    AI Discovers Promising New Battery Materials: Energy Storage
-                    Breakthrough
-                  </h3>
-                  <p class="card-description">
-                    Discover how AI is revolutionizing battery technology by
-                    finding new materials that improve longevity, charging
-                    speed, and sustainability. Learn about breakthrough
-                    discoveries in energy storage using machine learning and
-                    generative AI...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 18 -->
-            <a
-              href="blogs/ai-app-facial-recognition-text-analysis-children-emotional-states.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/ai-app-facial-recognition-text-analysis-children-emotional-states.jpg"
-                    alt="AI App for Children's Emotional Monitoring"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 08, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    New AI Project Idea: AI App for Children's Emotional
-                    Monitoring
-                  </h3>
-                  <p class="card-description">
-                    Discover an innovative AI app using facial recognition and
-                    text analysis to monitor children's emotional states online.
-                    Learn how machine learning, deep learning, and natural
-                    language processing can enhance parental awareness and child
-                    safety...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 19 -->
-            <a
-              href="blogs/open-source-ai-model-deepcogito-v2.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/open-source-ai-model-deepcogito-v2.jpg"
-                    alt="DeepCogito v2 - Open-Source AI Model"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 07, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    An Open-Source AI Model, DeepCogito v2: Revolutionizing AI
-                    Reasoning
-                  </h3>
-                  <p class="card-description">
-                    Discover DeepCogito v2, an advanced open-source AI model
-                    with hybrid reasoning capabilities. Learn how it's
-                    transforming machine learning, deep learning, and natural
-                    language processing with innovative IDA technology...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 20 -->
-            <a href="blogs/ai-revolution-deepseak.html" class="blog-card-link">
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/ai-revolution-deepseak.jpg"
-                    alt="AI Revolution with Deepseak"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 07, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    AI Revolution with Deepseak: Accelerating the Future of
-                    Artificial Intelligence
-                  </h3>
-                  <p class="card-description">
-                    Explore how Deepseak is driving the AI revolution by
-                    leveraging cutting-edge technologies like ChatGPT,
-                    generative AI, and machine learning. Discover the future of
-                    artificial intelligence and digital transformation...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 21 -->
-            <a href="blogs/ai-revolution-chatgpt.html" class="blog-card-link">
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/ai-revolution-chatgpt.jpg"
-                    alt="AI Revolution with ChatGPT"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 07, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    The AI Revolution with ChatGPT: Transforming Communication
-                    and Creativity
-                  </h3>
-                  <p class="card-description">
-                    Explore how ChatGPT is revolutionizing AI communication,
-                    content creation, and problem-solving. Discover the impact
-                    of generative AI on modern technology and digital
-                    transformation...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 22 -->
-            <a
-              href="blogs/ai-daily-life-transforming-modern-world.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/ai-daily-life-transforming-modern-world.jpg"
-                    alt="AI in Daily Life"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Applications</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 06, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    Usage of Artificial Intelligence in Day-to-Day Life:
-                    Transforming the Modern World
-                  </h3>
-                  <p class="card-description">
-                    Discover how AI is transforming daily life through smart
-                    assistants, personalized recommendations, health apps, and
-                    automation technology...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 23 -->
-            <a
-              href="blogs/ai-side-effects-navigating-double-edged-sword.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/ai-side-effects-navigating-double-edged-sword.jpg"
-                    alt="AI Side Effects"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Ethics</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 06, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    Side Effects of AI Usage: Navigating the Double-Edged Sword
-                    of Emerging Technology
-                  </h3>
-                  <p class="card-description">
-                    Explore the side effects of AI usage including job
-                    displacement, algorithmic bias, privacy risks, deepfakes,
-                    and environmental impact...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 24 -->
-            <a
-              href="blogs/understanding-artificial-intelligence-comprehensive-guide.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/understanding-artificial-intelligence-comprehensive-guide.jpg"
-                    alt="AI-Powered Tools"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI-Powered Tools</span>
-                    <span class="separator">•</span>
-                    <span class="date">Jan 08, 2024</span>
-                  </div>
-                  <h3 class="card-title">
-                    How Does AI Work: Understanding the Technology Behind
-                    AI-Powered Tools
-                  </h3>
-                  <p class="card-description">
-                    Learn the fundamentals of artificial intelligence and
-                    discover how AI-powered tools are changing the way we work
-                    and create...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 25 -->
-            <a
-              href="blogs/google-ai-revolution-palm2-power.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/google-ai-revolution-palm2-power.jpg"
-                    alt="Google AI Revolution with PaLM2"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 26, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    Google's AI Revolution: Transforming Cloud, Gmail, Docs, and Search with PaLM2 Power
-                  </h3>
-                  <p class="card-description">
-                    Discover how Google is revolutionizing AI across Cloud, Gmail, Docs, and Search with PaLM2 power. Learn about the latest AI technology updates and digital transformation...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 26 -->
-            <a
-              href="blogs/apple-ios19-beta5-ai-powered-features.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/apple-ios19-beta5-ai-powered-features.jpg"
-                    alt="Apple iOS 19 Beta 5 AI Features"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">Mobile Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 25, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    Apple Unveils iOS 19 Beta 5 Featuring AI-Powered Journal, Interactive Widgets & StandBy Modes
-                  </h3>
-                  <p class="card-description">
-                    Discover Apple's iOS 19 Beta 5 with AI-powered Journal app, interactive widgets, and StandBy modes. Learn about the latest AI technology updates and mobile innovation...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 27 -->
-            <a
-              href="blogs/mozilla-firefox-120-x-algorithm-ai-updates.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/Mozilla-Firefox-120-and-X's-Algorithm-Reveal.jpg"
-                    alt="Mozilla Firefox 120 and X Algorithm AI Updates"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 23, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    Mozilla Firefox 120 and X's Algorithm Reveal: Key AI-Driven Tech Updates Shaping Future Technology
-                  </h3>
-                  <p class="card-description">
-                    Discover how Mozilla Firefox 120's AI-powered translation and X's open-source algorithm reveal are shaping future technology. Learn about the latest AI updates and tech innovations...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 28 -->
-            <a
-              href="blogs/tata-consultancy-services-ai-enhanced-operations-center-mexico-city.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/tata-consultancy-services-ai-enhanced-operations-center-mexico-city.jpg"
-                    alt="TCS AI Enhanced Operations Center Mexico City"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 21, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    Tata Consultancy Services Launches AI-Enhanced Operations Center in Mexico City to Accelerate Latin America's Tech Transformation
-                  </h3>
-                  <p class="card-description">
-                    Discover how TCS launches an AI-enhanced operations center in Mexico City to accelerate Latin America's tech transformation. Learn about the latest AI technology updates and digital innovation...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 29 -->
-            <a
-              href="blogs/sam-altman-warns-us-china-ai-threat-wake-up-call-stronger-ai-policy.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/sam-altman-warns-us-china-ai-threat-wake-up-call-stronger-ai-policy.jpg"
-                    alt="Sam Altman China AI Threat Warning"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 24, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    Sam Altman Warns US of Underestimating China's AI Threat: A Wake-Up Call for Stronger AI Policy
-                  </h3>
-                  <p class="card-description">
-                    Discover how Sam Altman warns the US about underestimating China's AI threat and the urgent need for stronger AI policy. Learn about the latest AI technology updates and global competition...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 30 -->
-            <a
-              href="blogs/google-commits-9-billion-advanced-ai-data-centers-oklahoma-renewable-energy.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/google-commits-9-billion-advanced-ai-data-centers-oklahoma-renewable-energy.jpg"
-                    alt="Google AI Data Centers Oklahoma Renewable Energy"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 22, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    Google Commits $9 Billion to Advanced AI Data Centers in Oklahoma Powered by Renewable Energy
-                  </h3>
-                  <p class="card-description">
-                    Discover how Google commits $9 billion to advanced AI data centers in Oklahoma powered by renewable energy. Learn about the latest AI technology updates and sustainable innovation...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 31 -->
-            <a
-              href="blogs/how-ai-technology-revolutionizing-medical-imaging-surveillance-traffic-enforcement.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/how-ai-technology-revolutionizing-medical-imaging-surveillance-traffic-enforcement.jpg"
-                    alt="AI Technology Medical Imaging Surveillance Traffic Enforcement"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 24, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    How AI Technology is Revolutionizing Medical Imaging, Surveillance, and Traffic Enforcement
-                  </h3>
-                  <p class="card-description">
-                    Discover how AI technology is revolutionizing medical imaging, surveillance, and traffic enforcement. Learn about the latest AI technology updates and automation innovation...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 32 -->
-            <a
-              href="blogs/rising-ai-safety-concerns-malicious-ai-models-wormgpt-variants-threaten-digital-security.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/rising-ai-safety-concerns-malicious-ai-models-wormgpt-variants-threaten-digital-security.jpg"
-                    alt="AI Safety Concerns Malicious AI Models WormGPT Digital Security"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Aug 27, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    Rising AI Safety Concerns: How Malicious AI Models Like WormGPT Variants Threaten Digital Security
-                  </h3>
-                  <p class="card-description">
-                    Discover rising AI safety concerns and how malicious AI models like WormGPT variants threaten digital security. Learn about the latest AI technology updates and cybersecurity challenges...
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 25 - Microsoft MAI AI Models -->
-            <a
-              href="blogs/microsoft-launches-mai-ai-models-signaling-new-era-proprietary-ai-technology.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/microsoft-launches-mai-ai-models-signaling-new-era-proprietary-ai-technology.jpg"
-                    alt="Microsoft MAI AI Models - Proprietary AI Technology"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Sep 15, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    Microsoft Launches MAI AI Models, Signaling a New Era in Proprietary AI Technology
-                  </h3>
-                  <p class="card-description">
-                    Microsoft has unveiled two groundbreaking proprietary AI models—MAI-Voice-1 and MAI-1 Preview—signaling a major shift in its AI strategy and marking a significant milestone in emerging technology and digital transformation.
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 26 - AI-Powered Cardiac Care -->
-            <a
-              href="blogs/revolutionizing-cardiac-care-ai-powered-imaging-lens-esaote-next-gen-ultrasound-esc-2025.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/revolutionizing-cardiac-care-ai-powered-imaging-lens-esaote-next-gen-ultrasound-esc-2025.jpg"
-                    alt="AI-Powered Cardiac Care - Medical Imaging Innovation"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Healthcare</span>
-                    <span class="separator">•</span>
-                    <span class="date">Sep 14, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    Revolutionizing Cardiac Care: AI-Powered Imaging Lens and Esaote's Next-Gen Ultrasound Unveiled at ESC 2025
-                  </h3>
-                  <p class="card-description">
-                    Discover how AI-powered miniature cardiac imaging lens and Esaote's next-generation ultrasound systems are revolutionizing cardiovascular care with advanced machine learning and deep learning technologies.
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 27 - Apple AI Search Upgrade -->
-            <a
-              href="blogs/apple-new-ai-driven-search-upgrade-world-knowledge-answers-revolutionize-siri-transform-digital-search.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/apple-new-ai-driven-search-upgrade-world-knowledge-answers-revolutionize-siri-transform-digital-search.jpg"
-                    alt="Apple AI Search Upgrade - World Knowledge Answers"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Technology</span>
-                    <span class="separator">•</span>
-                    <span class="date">Sep 13, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    Apple's New AI-Driven Search Upgrade: How "World Knowledge Answers" Will Revolutionize Siri and Transform Digital Search
-                  </h3>
-                  <p class="card-description">
-                    Apple is gearing up for a major leap in artificial intelligence with its latest internal project, "World Knowledge Answers," designed to dramatically upgrade Siri's capabilities and position Apple as a serious competitor to AI search giants.
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 28 - US Government AI Leadership -->
-            <a
-              href="blogs/us-government-prioritizes-ai-leadership-trump-driving-future-emerging-technology-digital-transformation.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/us-government-prioritizes-ai-leadership-trump-driving-future-emerging-technology-digital-transformation.jpg"
-                    alt="US Government AI Leadership - Trump Administration"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Policy</span>
-                    <span class="separator">•</span>
-                    <span class="date">Sep 10, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    US Government Prioritizes AI Leadership Under Trump: Driving the Future of Emerging Technology and Digital Transformation
-                  </h3>
-                  <p class="card-description">
-                    The recent high-profile meeting led by the US government under President Donald J. Trump marked a significant milestone for artificial intelligence as a national priority, underscoring AI's role as a cornerstone of America's future technology strategy.
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 29 - AI Data Center North Dakota -->
-            <a
-              href="blogs/how-3-billion-ai-data-center-north-dakota-powering-future-artificial-intelligence-cloud-innovation.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/how-3-billion-ai-data-center-north-dakota-powering-future-artificial-intelligence-cloud-innovation.jpg"
-                    alt="AI Data Center North Dakota - $3 Billion Investment"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Infrastructure</span>
-                    <span class="separator">•</span>
-                    <span class="date">Sep 12, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    How the $3 Billion AI Data Center in North Dakota is Powering the Future of Artificial Intelligence and Cloud Innovation
-                  </h3>
-                  <p class="card-description">
-                    The $3 billion AI data center in Harwood, North Dakota is set to become a vital hub for AI training and cloud services, providing the computational resources needed for deep learning, NLP, and generative AI models.
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 30 - FTC AI Inquiry -->
-            <a
-              href="blogs/ftc-launches-inquiry-ai-chatbots-companions-game-changer-ai-technology-regulation.html"
-              class="blog-card-link"
-            >
-              <div class="blog-card-item">
-                <div class="card-header">
-                  <img
-                    src="blogImage/ftc-launches-inquiry-ai-chatbots-companions-game-changer-ai-technology-regulation.jpg"
-                    alt="FTC AI Inquiry - AI Chatbots as Companions"
-                    class="card-img"
-                  />
-                </div>
-                <div class="card-body">
-                  <div class="card-meta">
-                    <span class="category-badge">AI Regulation</span>
-                    <span class="separator">•</span>
-                    <span class="date">Sep 14, 2025</span>
-                  </div>
-                  <h3 class="card-title">
-                    FTC Launches Inquiry into AI Chatbots as Companions: A Game-Changer in AI Technology and Regulation
-                  </h3>
-                  <p class="card-description">
-                    The US Federal Trade Commission has launched an inquiry into AI chatbots acting as companions, signaling growing regulatory focus on how AI technology intersects with everyday life and consumer protection.
-                  </p>
-                </div>
-              </div>
-            </a>
+          <h2 class="section-title">All Blog Posts</h2>
+          <div class="blog-cards-grid" id="blogGrid">
+            <!-- Blog cards will be loaded here by JavaScript -->
           </div>
         </div>
 
-        <!-- View All Blogs Button -->
-        <div class="text-center mt-5">
-          <a
-            href="all-blogs.html"
-            class="btn btn-primary btn-lg load-all-blogs-btn"
-          >
-            <i class="fas fa-th-large me-2"></i>
-            View All Blogs with Pagination
-          </a>
+        <!-- Pagination -->
+        <div class="pagination-container">
+          <nav aria-label="Blog pagination">
+            <ul class="pagination" id="pagination">
+              <!-- Pagination will be generated by JavaScript -->
+            </ul>
+          </nav>
         </div>
       </div>
     </section>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    ></script>
     <script src="script.js"></script>
+    <script src="blog-data.js"></script>
+
+    <!-- Pagination Script -->
+    <script>
+      // Pagination settings
+      const itemsPerPage = 12;
+      let currentPage = 1;
+      let filteredData = [...blogData];
+
+      // Initialize the page
+      document.addEventListener('DOMContentLoaded', function() {
+        renderBlogs();
+        renderPagination();
+        setupFilters();
+      });
+
+      // Render blog cards
+      function renderBlogs() {
+        const blogGrid = document.getElementById('blogGrid');
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        const currentBlogs = filteredData.slice(startIndex, endIndex);
+
+        blogGrid.innerHTML = currentBlogs.map(blog => `
+          <a href="${blog.url}" class="blog-card-link">
+            <div class="blog-card-item">
+              <div class="card-header">
+                <img src="${blog.image}" alt="${blog.alt}" class="card-img" />
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <span class="category-badge">${blog.category}</span>
+                  <span class="separator">•</span>
+                  <span class="date">${blog.date}</span>
+                </div>
+                <h3 class="card-title">${blog.title}</h3>
+                <p class="card-description">${blog.description}</p>
+              </div>
+            </div>
+          </a>
+        `).join('');
+      }
+
+      // Render pagination
+      function renderPagination() {
+        const pagination = document.getElementById('pagination');
+        const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+        
+        if (totalPages <= 1) {
+          pagination.innerHTML = '';
+          return;
+        }
+
+        let paginationHTML = '';
+
+        // Previous button
+        paginationHTML += `
+          <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
+            <a class="page-link" href="#" onclick="changePage(${currentPage - 1})" aria-label="Previous">
+              <i class="fas fa-chevron-left"></i>
+            </a>
+          </li>
+        `;
+
+        // Page numbers
+        const startPage = Math.max(1, currentPage - 2);
+        const endPage = Math.min(totalPages, currentPage + 2);
+
+        if (startPage > 1) {
+          paginationHTML += `<li class="page-item"><a class="page-link" href="#" onclick="changePage(1)">1</a></li>`;
+          if (startPage > 2) {
+            paginationHTML += `<li class="page-item disabled"><span class="page-link">...</span></li>`;
+          }
+        }
+
+        for (let i = startPage; i <= endPage; i++) {
+          paginationHTML += `
+            <li class="page-item ${i === currentPage ? 'active' : ''}">
+              <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
+            </li>
+          `;
+        }
+
+        if (endPage < totalPages) {
+          if (endPage < totalPages - 1) {
+            paginationHTML += `<li class="page-item disabled"><span class="page-link">...</span></li>`;
+          }
+          paginationHTML += `<li class="page-item"><a class="page-link" href="#" onclick="changePage(${totalPages})">${totalPages}</a></li>`;
+        }
+
+        // Next button
+        paginationHTML += `
+          <li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
+            <a class="page-link" href="#" onclick="changePage(${currentPage + 1})" aria-label="Next">
+              <i class="fas fa-chevron-right"></i>
+            </a>
+          </li>
+        `;
+
+        pagination.innerHTML = paginationHTML;
+      }
+
+      // Change page
+      function changePage(page) {
+        const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+        if (page >= 1 && page <= totalPages) {
+          currentPage = page;
+          renderBlogs();
+          renderPagination();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }
+
+      // Setup filters
+      function setupFilters() {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        
+        filterButtons.forEach(btn => {
+          btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Update active button
+            filterButtons.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Filter data
+            const category = this.getAttribute('data-category');
+            if (category === 'all') {
+              filteredData = [...blogData];
+            } else {
+              filteredData = blogData.filter(blog => blog.category === category);
+            }
+            
+            // Reset to first page and render
+            currentPage = 1;
+            renderBlogs();
+            renderPagination();
+          });
+        });
+      }
+
+      // Make functions global for onclick handlers
+      window.changePage = changePage;
+    </script>
   </body>
 </html>
