@@ -76,11 +76,57 @@ document.addEventListener('DOMContentLoaded', function() {
         navbar.style.transform = 'translateY(0)';
     }, 100);
 
+    // Input validation function
+    function validateInput(input, type) {
+        if (!input || typeof input !== 'string') return false;
+        
+        switch(type) {
+            case 'email':
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(input.trim());
+            case 'name':
+                const nameRegex = /^[a-zA-Z\s]{2,50}$/;
+                return nameRegex.test(input.trim());
+            case 'message':
+                return input.trim().length >= 10 && input.trim().length <= 1000;
+            default:
+                return input.trim().length > 0;
+        }
+    }
+
     // Contact form handling
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
+            
+            // Get form elements
+            const nameInput = this.querySelector('input[name="name"]');
+            const emailInput = this.querySelector('input[name="email"]');
+            const messageInput = this.querySelector('textarea[name="message"]');
+            
+            // Validate inputs
+            let isValid = true;
+            let errorMessage = '';
+            
+            if (!validateInput(nameInput.value, 'name')) {
+                isValid = false;
+                errorMessage = 'Please enter a valid name (2-50 characters, letters and spaces only).';
+                nameInput.focus();
+            } else if (!validateInput(emailInput.value, 'email')) {
+                isValid = false;
+                errorMessage = 'Please enter a valid email address.';
+                emailInput.focus();
+            } else if (!validateInput(messageInput.value, 'message')) {
+                isValid = false;
+                errorMessage = 'Please enter a message between 10 and 1000 characters.';
+                messageInput.focus();
+            }
+            
+            if (!isValid) {
+                showNotification(errorMessage, 'error');
+                return;
+            }
             
             // Get form data
             const formData = new FormData(this);
@@ -119,24 +165,56 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Input sanitization function
+    function sanitizeInput(input) {
+        if (typeof input !== 'string') return '';
+        return input
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#x27;')
+            .replace(/\//g, '&#x2F;');
+    }
+
     // Notification function
     function showNotification(message, type) {
         // Remove existing notifications
         const existingNotifications = document.querySelectorAll('.notification');
         existingNotifications.forEach(notification => notification.remove());
         
-        // Create notification element
+        // Sanitize inputs
+        const sanitizedMessage = sanitizeInput(message);
+        const sanitizedType = sanitizeInput(type);
+        
+        // Create notification element safely
         const notification = document.createElement('div');
-        notification.className = `notification notification-${type}`;
-        notification.innerHTML = `
-            <div class="notification-content">
-                <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i>
-                <span>${message}</span>
-                <button class="notification-close" onclick="this.parentElement.parentElement.remove()">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-        `;
+        notification.className = `notification notification-${sanitizedType}`;
+        
+        // Create elements safely without innerHTML
+        const content = document.createElement('div');
+        content.className = 'notification-content';
+        
+        const icon = document.createElement('i');
+        icon.className = `fas ${sanitizedType === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}`;
+        
+        const messageSpan = document.createElement('span');
+        messageSpan.textContent = sanitizedMessage;
+        
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'notification-close';
+        closeBtn.addEventListener('click', function() {
+            notification.remove();
+        });
+        
+        const closeIcon = document.createElement('i');
+        closeIcon.className = 'fas fa-times';
+        closeBtn.appendChild(closeIcon);
+        
+        content.appendChild(icon);
+        content.appendChild(messageSpan);
+        content.appendChild(closeBtn);
+        notification.appendChild(content);
         
         // Add to page
         document.body.appendChild(notification);
