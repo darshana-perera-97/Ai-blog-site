@@ -629,5 +629,65 @@ const blogData = [
     image: "blogImage/android-15-upside-down-cake-finalized.jpg",
     url: "blogs/android-15-upside-down-cake-finalized.html",
     alt: "Android 15 Upside Down Cake"
+  },
+  {
+    id: 64,
+    title: "Microsoft Launches MAI AI Models, Signaling a New Era in Proprietary AI Technology",
+    description: "Microsoft has unveiled two groundbreaking proprietary AI models—MAI-Voice-1 and MAI-1 Preview—signaling a major shift in its AI strategy and marking a significant milestone in emerging technology and digital transformation.",
+    category: "AI Technology",
+    date: "Sep 15, 2025",
+    image: "blogImage/microsoft-launches-mai-ai-models-signaling-new-era-proprietary-ai-technology.jpg",
+    url: "blogs/microsoft-launches-mai-ai-models-signaling-new-era-proprietary-ai-technology.html",
+    alt: "Microsoft MAI AI Models - Proprietary AI Technology"
+  },
+  {
+    id: 65,
+    title: "Revolutionizing Cardiac Care: AI-Powered Imaging Lens and Esaote's Next-Gen Ultrasound Unveiled at ESC 2025",
+    description: "Discover how AI-powered miniature cardiac imaging lens and Esaote's next-generation ultrasound systems are revolutionizing cardiovascular care with advanced machine learning and deep learning technologies.",
+    category: "AI Healthcare",
+    date: "Sep 14, 2025",
+    image: "blogImage/revolutionizing-cardiac-care-ai-powered-imaging-lens-esaote-next-gen-ultrasound-esc-2025.jpg",
+    url: "blogs/revolutionizing-cardiac-care-ai-powered-imaging-lens-esaote-next-gen-ultrasound-esc-2025.html",
+    alt: "AI-Powered Cardiac Care - Medical Imaging Innovation"
+  },
+  {
+    id: 66,
+    title: "Apple's New AI-Driven Search Upgrade: How \"World Knowledge Answers\" Will Revolutionize Siri and Transform Digital Search",
+    description: "Apple is gearing up for a major leap in artificial intelligence with its latest internal project, \"World Knowledge Answers,\" designed to dramatically upgrade Siri's capabilities and position Apple as a serious competitor to AI search giants.",
+    category: "AI Technology",
+    date: "Sep 13, 2025",
+    image: "blogImage/apple-new-ai-driven-search-upgrade-world-knowledge-answers-revolutionize-siri-transform-digital-search.jpg",
+    url: "blogs/apple-new-ai-driven-search-upgrade-world-knowledge-answers-revolutionize-siri-transform-digital-search.html",
+    alt: "Apple AI Search Upgrade - World Knowledge Answers"
+  },
+  {
+    id: 67,
+    title: "US Government Prioritizes AI Leadership Under Trump: Driving the Future of Emerging Technology and Digital Transformation",
+    description: "The recent high-profile meeting led by the US government under President Donald J. Trump marked a significant milestone for artificial intelligence as a national priority, underscoring AI's role as a cornerstone of America's future technology strategy.",
+    category: "AI Policy",
+    date: "Sep 10, 2025",
+    image: "blogImage/us-government-prioritizes-ai-leadership-trump-driving-future-emerging-technology-digital-transformation.jpg",
+    url: "blogs/us-government-prioritizes-ai-leadership-trump-driving-future-emerging-technology-digital-transformation.html",
+    alt: "US Government AI Leadership - Trump Administration"
+  },
+  {
+    id: 68,
+    title: "How the $3 Billion AI Data Center in North Dakota is Powering the Future of Artificial Intelligence and Cloud Innovation",
+    description: "The $3 billion AI data center in Harwood, North Dakota is set to become a vital hub for AI training and cloud services, providing the computational resources needed for deep learning, NLP, and generative AI models.",
+    category: "AI Infrastructure",
+    date: "Sep 12, 2025",
+    image: "blogImage/how-3-billion-ai-data-center-north-dakota-powering-future-artificial-intelligence-cloud-innovation.jpg",
+    url: "blogs/how-3-billion-ai-data-center-north-dakota-powering-future-artificial-intelligence-cloud-innovation.html",
+    alt: "AI Data Center North Dakota - $3 Billion Investment"
+  },
+  {
+    id: 69,
+    title: "FTC Launches Inquiry into AI Chatbots as Companions: A Game-Changer in AI Technology and Regulation",
+    description: "The US Federal Trade Commission has launched an inquiry into AI chatbots acting as companions, signaling growing regulatory focus on how AI technology intersects with everyday life and consumer protection.",
+    category: "AI Regulation",
+    date: "Sep 14, 2025",
+    image: "blogImage/ftc-launches-inquiry-ai-chatbots-companions-game-changer-ai-technology-regulation.jpg",
+    url: "blogs/ftc-launches-inquiry-ai-chatbots-companions-game-changer-ai-technology-regulation.html",
+    alt: "FTC AI Inquiry - AI Chatbots as Companions"
   }
 ];
